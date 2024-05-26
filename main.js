@@ -1,7 +1,8 @@
-var canvas=document.getElementById('myCanvas');
+canvas=document.getElementById('myCanvas');
+ctx=canvas.getContext("2d");
 
-greencar_height=75;
-greencar_width=100;
+greencar_height=100;
+greencar_width=75;
 greencar_x=5;
 greencar_y=225;
 
@@ -25,7 +26,7 @@ ctx.drawImage(background_imgTag, 0, 0, canvas.width, canvas.height);
 }
 
 function uploadgreencar() {
-ctx.drawImage(greencar_imgTag, greencar_x, greencar_y,greencar.width, greencar.height);
+ctx.drawImage(greencar_imgTag, greencar_x, greencar_y,greencar_width, greencar_height);
 }
 
 
@@ -97,7 +98,7 @@ if(greencar_x>=0)
 
 function right()
 {
-if(greencar_x<=400)
+if(greencar_x<=800)
  {
    greencar_x = greencar_x+10;
    console.log("When up arrow is pressed, x=," + greencar_x + "|y=" + greencar_y);
